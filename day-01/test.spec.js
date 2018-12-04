@@ -4,7 +4,7 @@ const solution = require('./solution');
 
 const input = fs.readFileSync(`${__dirname}/input.txt`).toString();
 
-describe('Day 1 -  Chronal Calibration', () => {
+describe('Day 1 - Chronal Calibration', () => {
   describe('Part 1', () => {
     it('+1, +1, +1 should return 3', () => {
       const res = solution.partOne(`+1
