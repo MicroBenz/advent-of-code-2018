@@ -4,26 +4,26 @@ const solution = require('./solution');
 
 const input = fs.readFileSync(`${__dirname}/input.txt`).toString();
 
-describe('Day 2 - Inventory Management System', () => {
-  describe('Part 1', () => {
-    it(`
-    abcdef
-    bababc
-    abbcde
-    abcccd
-    aabcdd
-    abcdee
-    ababab
-    should return 12
-    `, () => {
-      const res = solution.partOne(`abcdef
+const sampleTestcase = `abcdef
 bababc
 abbcde
 abcccd
 aabcdd
 abcdee
-ababab`);
-      expect(res).toEqual(12);
+ababab`;
+
+const sampleTestcaseTwo = `abcde
+fghij
+klmno
+pqrst
+fguij
+axcye
+wvxyz`;
+
+describe('Day 2 - Inventory Management System', () => {
+  describe('Part 1', () => {
+    it('Sample testcase should return 12', () => {
+      expect(solution.partOne(sampleTestcase)).toEqual(12);
     })
 
     it('Answer is 9139', () => {
@@ -32,24 +32,8 @@ ababab`);
   })
   
   describe('Part 2', () => {
-    it (`
-    abcde
-    fghij
-    klmno
-    pqrst
-    fguij
-    axcye
-    wvxyz
-    should return fgij
-    `, () => {
-      const res = solution.partTwo(`abcde
-fghij
-klmno
-pqrst
-fguij
-axcye
-wvxyz`);
-      expect(res).toEqual('fgij');
+    it ('Sample testcase should return fgij', () => {
+      expect(solution.partTwo(sampleTestcaseTwo)).toEqual('fgij');
     });
 
     it('Answer is uqcidadzwtnhsljvxyobmkfyr', () => {
